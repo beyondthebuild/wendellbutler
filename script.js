@@ -1,6 +1,6 @@
 // ===== HERO VIDEO FADE + TITLE =====
 (function() {
-  const video = document.querySelector('.hero-video');
+  const video = document.querySelector('.hero-video-wrap');
   const w1 = document.querySelector('.hw-word-1');
   const w2 = document.querySelector('.hw-word-2');
 
@@ -10,17 +10,11 @@
   }
 
   if (video) {
-    // Fade video in and start typing once it's actually playing
-    video.addEventListener('playing', function handler() {
-      video.classList.add('fade-in');
-      setTimeout(startTyping, 400); // small delay so video is visible first
-      video.removeEventListener('playing', handler);
-    });
-    // Fallback: show and start after 3s if autoplay is slow
+    // YouTube iframe: fade in after short delay, then start typing
     setTimeout(() => {
       video.classList.add('fade-in');
-      startTyping();
-    }, 3000);
+      setTimeout(startTyping, 400);
+    }, 1500);
   } else {
     startTyping();
   }

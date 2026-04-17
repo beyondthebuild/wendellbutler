@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
   <link rel="preload" href="smooth_fantasy (1)/Smooth Fantasy PersonalUseOnly.ttf" as="font" type="font/truetype" crossorigin="anonymous" />
 
-  <link rel="stylesheet" href="style.css?v=124" />
+  <link rel="stylesheet" href="style.css?v=125" />
 </head>
 <body>
 
@@ -51,9 +51,16 @@
 
   <!-- ===== HERO ===== -->
   <section id="hero">
-    <video class="hero-video" autoplay muted loop playsinline preload="auto">
-      <source src="Wendell Hero Video.mp4" type="video/mp4" />
-    </video>
+    <div class="hero-video-wrap">
+      <iframe
+        id="yt-hero"
+        class="hero-video"
+        src="https://www.youtube.com/embed/XM5MU5g3uQ4?autoplay=1&mute=1&loop=1&playlist=XM5MU5g3uQ4&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1"
+        allow="autoplay; encrypted-media"
+        allowfullscreen
+        frameborder="0"
+      ></iframe>
+    </div>
     <div class="hero-video-overlay"></div>
     <div class="hero-bg"></div>
     <div class="container">
@@ -697,6 +704,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=17"></script>
+  <script src="script.js?v=18"></script>
 </body>
 </html>
