@@ -1,0 +1,7 @@
+# Videos (too large for GitHub)
+*.mp4
+*.MOV
+*.mov
+
+# macOS
+.DS_Store
