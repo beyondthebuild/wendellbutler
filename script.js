@@ -1,6 +1,6 @@
 // ===== HERO VIDEO FADE + TITLE =====
 (function() {
-  const video = document.querySelector('.hero-video-wrap');
+  const video = document.querySelector('.hero-video');
   const w1 = document.querySelector('.hw-word-1');
   const w2 = document.querySelector('.hw-word-2');
 
@@ -10,11 +10,15 @@
   }
 
   if (video) {
-    // YouTube iframe: fade in after short delay, then start typing
-    setTimeout(() => {
+    video.addEventListener('playing', function handler() {
       video.classList.add('fade-in');
       setTimeout(startTyping, 400);
-    }, 1500);
+      video.removeEventListener('playing', handler);
+    });
+    setTimeout(() => {
+      video.classList.add('fade-in');
+      startTyping();
+    }, 3000);
   } else {
     startTyping();
   }
