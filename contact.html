@@ -176,6 +176,106 @@
         position: static;
       }
     }
+
+    /* ===== NEWSLETTER BLOCK ===== */
+    .newsletter-block {
+      background: rgba(103,139,201,0.06);
+      border-top: 1px solid rgba(103,139,201,0.15);
+      border-bottom: 1px solid rgba(103,139,201,0.15);
+      padding: 80px 0;
+    }
+
+    .newsletter-block-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .newsletter-block-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #678bc9;
+      margin-bottom: 0.75rem;
+    }
+
+    .newsletter-block-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.2;
+      margin-bottom: 0.9rem;
+    }
+
+    .newsletter-block-desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+    }
+
+    .newsletter-block-form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+
+    .newsletter-block-form input {
+      width: 100%;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 6px;
+      padding: 0.75rem 1rem;
+      color: var(--text);
+      font-size: 0.88rem;
+      font-family: inherit;
+      outline: none;
+      transition: border-color 0.2s;
+      box-sizing: border-box;
+    }
+
+    .newsletter-block-form input::placeholder {
+      color: rgba(255,255,255,0.25);
+    }
+
+    .newsletter-block-form input:focus {
+      border-color: rgba(103,139,201,0.5);
+    }
+
+    .newsletter-block-form button {
+      width: 100%;
+      background: #678bc9;
+      color: #07090f;
+      border: none;
+      border-radius: 6px;
+      padding: 0.75rem 1rem;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      cursor: pointer;
+      font-family: inherit;
+      transition: opacity 0.2s;
+    }
+
+    .newsletter-block-form button:hover {
+      opacity: 0.85;
+    }
+
+    .newsletter-privacy {
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.25);
+      margin-top: 0.25rem;
+    }
+
+    @media (max-width: 760px) {
+      .newsletter-block-inner {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -309,6 +409,30 @@
             <button type="submit" class="btn-primary" style="width:100%;justify-content:center;padding:0.5rem 1.5rem;font-size:0.8rem;margin-top:1.5rem;background:#678bc9;color:#0d121f;">
               Send Message
             </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== NEWSLETTER BLOCK ===== -->
+  <section class="newsletter-block">
+    <div class="container">
+      <div class="newsletter-block-inner reveal">
+
+        <div>
+          <p class="newsletter-block-label">Newsletter</p>
+          <h2 class="newsletter-block-title">Subscribe to the Newsletter</h2>
+          <p class="newsletter-block-desc">Front-row access to the conversations, decisions, and deals that matter.</p>
+        </div>
+
+        <div>
+          <form class="newsletter-block-form" onsubmit="(function(e){e.preventDefault();var f=e.target;var name=f.querySelector('[name=nl_name]').value.trim();var email=f.querySelector('[name=nl_email]').value.trim();window.open('https://wendellbutler.beehiiv.com/subscribe?email='+encodeURIComponent(email)+'&utm_source=website','_blank');f.reset();})(event)">
+            <input type="text" name="nl_name" placeholder="Your name" required />
+            <input type="email" name="nl_email" placeholder="Your email address" required />
+            <button type="submit">Subscribe →</button>
+            <p class="newsletter-privacy">No spam. Unsubscribe anytime.</p>
           </form>
         </div>
 
