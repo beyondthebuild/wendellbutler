@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Wendell Butler — Let's Build Together</title>
+  <meta name="description" content="Get in touch with Wendell Butler — for deal submissions, joint ventures, investment consulting, or general inquiries." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <link rel="preload" href="smooth_fantasy (1)/Smooth Fantasy PersonalUseOnly.ttf" as="font" type="font/truetype" crossorigin="anonymous" />
+
+  <link rel="stylesheet" href="style.css?v=128" />
+
+  <style>
+    .contact-page-hero {
+      padding: 160px 0 80px;
+      background: #07090f;
+      background-image:
+        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(103,139,201,0.13) 0%, transparent 65%),
+        radial-gradient(ellipse 40% 50% at 0% 70%, rgba(103,139,201,0.06) 0%, transparent 55%),
+        radial-gradient(ellipse 35% 40% at 100% 85%, rgba(103,139,201,0.05) 0%, transparent 50%);
+      text-align: center;
+    }
+
+    .contact-page-hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.1;
+      margin-bottom: 1.25rem;
+    }
+
+    .contact-page-hero-sub {
+      font-size: 1rem;
+      color: var(--text-muted);
+      max-width: 500px;
+      margin: 0 auto;
+      line-height: 1.75;
+    }
+
+    /* ===== CONTACT SECTION ===== */
+    .contact-page-section {
+      padding: 80px 0 120px;
+      background: #07090f;
+    }
+
+    .contact-page-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 5rem;
+      align-items: start;
+    }
+
+    /* Left column */
+    .contact-info-col {
+      padding-top: 0.5rem;
+    }
+
+    .contact-info-heading {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.2;
+      margin-bottom: 1.25rem;
+    }
+
+    .contact-info-heading span {
+      color: #678bc9;
+    }
+
+    .contact-info-desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+      margin-bottom: 2.5rem;
+    }
+
+    /* Detail rows */
+    .contact-detail-row {
+      display: flex;
+      flex-direction: column;
+      gap: 1.1rem;
+      margin-bottom: 3rem;
+    }
+
+    .contact-detail-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .contact-detail-icon-wrap {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      background: rgba(103,139,201,0.1);
+      border: 1px solid rgba(103,139,201,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .contact-detail-text {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    .contact-detail-text a {
+      color: var(--text-muted);
+      transition: color 0.2s;
+    }
+
+    .contact-detail-text a:hover {
+      color: #678bc9;
+    }
+
+    /* Social row */
+    .contact-social-row {
+      display: flex;
+      gap: 0.75rem;
+    }
+
+    .contact-social-link {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,0.5);
+      transition: color 0.2s, border-color 0.2s, background 0.2s;
+    }
+
+    .contact-social-link:hover {
+      color: #678bc9;
+      border-color: rgba(103,139,201,0.4);
+      background: rgba(103,139,201,0.06);
+    }
+
+    /* Right column — form */
+    .contact-form-wrap {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 8px;
+      padding: 2.5rem 2.25rem;
+      position: sticky;
+      top: 100px;
+    }
+
+    .contact-form-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 0.4rem;
+    }
+
+    .contact-form-sub {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+    }
+
+    @media (max-width: 860px) {
+      .contact-page-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+      .contact-form-wrap {
+        position: static;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <nav id="main-nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo">Wendell <span>Butler</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="index.html#ventures">Ventures</a></li>
+        <li><a href="index.html#portfolio">Snapshots</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-cta-wrap">
+        <a href="https://calendly.com/wendell-butler" target="_blank" class="nav-cta">Schedule a Call</a>
+        <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== MOBILE MENU ===== -->
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="mobile-close" id="mobile-close" aria-label="Close menu">✕</button>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="index.html#ventures">Ventures</a>
+    <a href="index.html#portfolio">Snapshots</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <!-- ===== PAGE HERO ===== -->
+  <div class="contact-page-hero">
+    <div class="container">
+      <div class="reveal">
+        <p class="section-label" style="color:#678bc9;">Get in Touch</p>
+        <h1 class="contact-page-hero-title">Let's Build<br />Something Together.</h1>
+        <p class="contact-page-hero-sub">Whether you have a deal, a partnership, or just want to connect — the door is always open.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section class="contact-page-section">
+    <div class="container">
+      <div class="contact-page-grid">
+
+        <!-- Left: Info -->
+        <div class="contact-info-col reveal">
+          <h2 class="contact-info-heading">Start the<br /><span>Conversation.</span></h2>
+          <p class="contact-info-desc">
+            Wendell is always open to conversations with motivated people — whether it's a real estate deal, a business partnership, a lending opportunity, or just a genuine connection. Fill out the form and he'll get back to you.
+          </p>
+
+          <div class="contact-detail-row">
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon-wrap">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#678bc9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,4 12,13 2,4"/></svg>
+              </div>
+              <span class="contact-detail-text">wendell@hhcapitalrealty.com</span>
+            </div>
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon-wrap">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#678bc9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <span class="contact-detail-text">Charlotte, NC</span>
+            </div>
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon-wrap">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#678bc9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              </div>
+              <span class="contact-detail-text"><a href="https://calendly.com/wendell-butler" target="_blank">calendly.com/wendell-butler</a></span>
+            </div>
+          </div>
+
+          <p style="font-size:0.72rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:1rem;">Connect Online</p>
+          <div class="contact-social-row">
+            <a href="https://www.linkedin.com/in/wendellpbutleriv/" target="_blank" class="contact-social-link" aria-label="LinkedIn">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/wendellpbutleriv/" target="_blank" class="contact-social-link" aria-label="Instagram">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+            <a href="https://www.facebook.com/wendellpbutleriv" target="_blank" class="contact-social-link" aria-label="Facebook">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="https://www.youtube.com/@beyondthebuildpod" target="_blank" class="contact-social-link" aria-label="YouTube">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Form -->
+        <div class="contact-form-wrap reveal">
+          <p class="contact-form-title">Send a Message</p>
+          <p class="contact-form-sub">Fill out the form below and Wendell will get back to you shortly.</p>
+
+          <form id="contact-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="fname" placeholder="John" required />
+              </div>
+              <div class="form-group">
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lname" placeholder="Smith" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="john@example.com" required />
+            </div>
+            <div class="form-group">
+              <label for="interest">Area of Interest</label>
+              <select id="interest" name="interest" required>
+                <option value="" disabled selected>Select one…</option>
+                <option value="Joint Venture">Joint Venture / Partnership</option>
+                <option value="Investment Consulting">Investment Consulting</option>
+                <option value="Deal Submission">Deal Submission</option>
+                <option value="Entrepreneurial Venture">Entrepreneurial Venture</option>
+                <option value="General Inquiry">General Inquiry</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Tell me a bit about what you have in mind…" required></textarea>
+            </div>
+            <button type="submit" class="btn-primary" style="width:100%;justify-content:center;padding:0.5rem 1.5rem;font-size:0.8rem;margin-top:0.4rem;background:#678bc9;color:#0d121f;">
+              Send Message
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="container footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">Wendell <span>Butler</span></div>
+        <p class="footer-tagline">Building businesses that matter. Doing<br>the work, making impact, and always going<br>beyond the build.</p>
+        <div class="footer-social-icons" style="margin-top:1rem;">
+          <a href="https://www.facebook.com/wendellpbutleriv" target="_blank" class="footer-icon" aria-label="Facebook">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/wendellpbutleriv/" target="_blank" class="footer-icon" aria-label="Instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+          <a href="https://www.youtube.com/@beyondthebuildpod" target="_blank" class="footer-icon" aria-label="YouTube">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/wendellpbutleriv/" target="_blank" class="footer-icon" aria-label="LinkedIn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-nav">
+        <p class="footer-nav-title">Beyond the Build</p>
+        <ul class="footer-links">
+          <li><a href="about.html">About Me</a></li>
+          <li><a href="index.html#ventures">Ventures</a></li>
+          <li><a href="index.html#portfolio">Snapshots</a></li>
+          <li><a href="https://open.spotify.com/show/4e8B5ZI75I6wzo6FFw55yo?si=0d87d9c12abb416c" target="_blank">Podcast</a></li>
+          <li><a href="https://wendellbutler.beehiiv.com/subscribe" target="_blank">Newsletter</a></li>
+        </ul>
+      </div>
+      <div class="footer-nav">
+        <p class="footer-nav-title">Connect with Wendell</p>
+        <ul class="footer-links">
+          <li><a href="https://www.facebook.com/wendellpbutleriv" target="_blank">Facebook</a></li>
+          <li><a href="https://www.linkedin.com/in/wendellpbutleriv/" target="_blank">LinkedIn</a></li>
+          <li><a href="https://www.instagram.com/wendellpbutleriv/" target="_blank">Instagram</a></li>
+          <li><a href="https://www.youtube.com/@beyondthebuildpod" target="_blank">YouTube</a></li>
+        </ul>
+      </div>
+      <div class="footer-newsletter">
+        <p class="footer-nav-title">Subscribe to My Newsletter</p>
+        <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
+        <iframe src="https://subscribe-forms.beehiiv.com/316bcc62-9cb6-4165-9828-1ddf9796481d" class="beehiiv-embed" data-test-id="beehiiv-embed" frameborder="0" scrolling="no" style="width: 246px; height: 46px; margin: 0; border-radius: 0px !important; background-color: transparent; box-shadow: 0 0 #0000; max-width: 100%;"></iframe>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <div class="footer-legal">
+        <a href="#" class="footer-legal-link">Terms of Service</a>
+        <a href="#" class="footer-legal-link">Privacy Policy</a>
+      </div>
+      <p class="footer-copy">&copy; 2026 Wendell Butler. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js?v=19"></script>
+</body>
+</html>
