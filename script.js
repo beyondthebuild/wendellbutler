@@ -120,3 +120,26 @@ window.addEventListener('scroll', () => {
   });
 }, { passive: true });
 
+
+// ===== TESTIMONIAL CAROUSEL =====
+document.addEventListener('DOMContentLoaded', function() {
+  var tCurrent = 0;
+  var slides = document.querySelectorAll('.testimonial-slide');
+  var dots = document.querySelectorAll('.testimonial-dot');
+
+  function showSlide(n) {
+    if (!slides.length) return;
+    slides.forEach(function(s) { s.classList.remove('active'); });
+    dots.forEach(function(d) { d.classList.remove('active'); });
+    tCurrent = (n + slides.length) % slides.length;
+    slides[tCurrent].classList.add('active');
+    if (dots[tCurrent]) dots[tCurrent].classList.add('active');
+  }
+
+  window.testimonialNext = function() { showSlide(tCurrent + 1); };
+  window.testimonialPrev = function() { showSlide(tCurrent - 1); };
+  window.testimonialGo  = function(n) { showSlide(n); };
+
+  // Auto-advance every 6 seconds
+  setInterval(function() { showSlide(tCurrent + 1); }, 16000);
+});

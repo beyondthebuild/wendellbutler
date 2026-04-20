@@ -484,7 +484,7 @@ nav.scrolled {
 
 /* ===== ABOUT ===== */
 #about {
-  background: #07090f;
+  background: #080c14;
   padding-top: 160px;
   padding-bottom: 12rem;
 }
@@ -696,7 +696,7 @@ nav.scrolled {
 
 /* ===== VENTURES ===== */
 .ventures-section {
-  background: rgba(255,255,255,0.03);
+  background: #0e1a2b;
 }
 
 .ventures-section .section-label {
@@ -857,7 +857,7 @@ nav.scrolled {
 }
 
 #portfolio {
-  background: var(--bg);
+  background: #080c14;
 }
 
 .portfolio-header {
@@ -1019,7 +1019,7 @@ nav.scrolled {
 
 /* ===== PODCAST ===== */
 .podcast-section {
-  background: var(--bg);
+  background: #080c14;
   border-top: 1px solid var(--border);
 }
 
@@ -1163,7 +1163,7 @@ nav.scrolled {
 }
 
 #services {
-  background: var(--bg);
+  background: #080c14;
 }
 
 .services-grid {
@@ -1446,6 +1446,62 @@ nav.scrolled {
   letter-spacing: 0.05em;
 }
 
+.testimonial-carousel {
+  position: relative;
+}
+.testimonial-slide {
+  display: none;
+  animation: testimonialFade 1s ease;
+}
+.testimonial-slide.active {
+  display: block;
+}
+@keyframes testimonialFade {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.testimonial-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-top: 2.5rem;
+}
+.testimonial-prev,
+.testimonial-next {
+  background: rgba(103,139,201,0.1);
+  border: 1px solid rgba(103,139,201,0.25);
+  color: #678bc9;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+.testimonial-prev:hover,
+.testimonial-next:hover {
+  background: rgba(103,139,201,0.2);
+  border-color: #678bc9;
+}
+.testimonial-dots {
+  display: flex;
+  gap: 0.5rem;
+}
+.testimonial-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(103,139,201,0.3);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.testimonial-dot.active {
+  background: #678bc9;
+}
+
 /* ===== NEWSLETTER ===== */
 @keyframes pulse-glow {
   0%, 100% { opacity: 0.12; transform: scale(1); }
@@ -1459,7 +1515,7 @@ nav.scrolled {
 
 .newsletter-block {
   padding: 100px 0;
-  background: var(--bg-card);
+  background: #0e1a2b;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -1536,7 +1592,7 @@ nav.scrolled {
 }
 
 #contact {
-  background: var(--bg);
+  background: #0e1a2b;
 }
 
 .contact-grid {
