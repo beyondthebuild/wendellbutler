@@ -90,7 +90,7 @@ img {
 .divider {
   width: 48px;
   height: 2px;
-  background: #CADCFC;
+  background: #678bc9;
   margin-bottom: 2.5rem;
 }
 
@@ -141,7 +141,7 @@ nav.scrolled {
 }
 
 .nav-logo span {
-  color: #CADCFC;
+  color: #678bc9;
 }
 
 .nav-links {
@@ -179,15 +179,15 @@ nav.scrolled {
   border: none;
   border-radius: var(--radius);
   background: transparent;
-  border: 1.5px solid #CADCFC;
-  color: #CADCFC !important;
+  border: 1.5px solid #678bc9;
+  color: #678bc9 !important;
   position: relative;
   overflow: hidden;
   transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease !important;
 }
 
 .nav-cta:hover {
-  background: #CADCFC !important;
+  background: #678bc9 !important;
   color: #ffffff !important;
   box-shadow: 0 4px 20px rgba(103, 139, 201, 0.4);
   transform: translateY(-1px);
@@ -279,7 +279,7 @@ nav.scrolled {
   font-size: 1rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: #CADCFC;
+  color: #678bc9;
   font-weight: 500;
   margin-bottom: 2.5rem;
 }
@@ -551,8 +551,8 @@ nav.scrolled {
 }
 
 .about-btn:hover {
-  color: #CADCFC !important;
-  border-bottom-color: #CADCFC;
+  color: #678bc9 !important;
+  border-bottom-color: #678bc9;
 }
 
 .about-accent-box {
@@ -573,7 +573,7 @@ nav.scrolled {
 
 .about-text .section-label {
   font-size: 0.8rem;
-  color: #CADCFC;
+  color: #678bc9;
   letter-spacing: 0.2em;
 }
 
@@ -603,7 +603,7 @@ nav.scrolled {
   text-align: center;
   background: rgba(103, 139, 201, 0.05);
   border: 1px solid rgba(103, 139, 201, 0.15);
-  border-top: 2px solid #CADCFC;
+  border-top: 2px solid #678bc9;
   border-radius: 12px;
   padding: 1.75rem 1rem 1.5rem;
   position: relative;
@@ -665,7 +665,7 @@ nav.scrolled {
   font-family: 'Playfair Display', serif;
   font-size: clamp(2.5rem, 5vw, 3.5rem);
   font-weight: 700;
-  background: linear-gradient(135deg, #ffffff 30%, #CADCFC 100%);
+  background: linear-gradient(135deg, #ffffff 30%, #678bc9 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -700,7 +700,7 @@ nav.scrolled {
 }
 
 .ventures-section .section-label {
-  color: #CADCFC;
+  color: #678bc9;
 }
 
 .ventures-title {
@@ -801,13 +801,13 @@ nav.scrolled {
 }
 
 .venture-stack-card:hover .vsc-arrow {
-  color: #CADCFC;
+  color: #678bc9;
   transform: translate(3px, -3px);
 }
 
 /* ===== PORTFOLIO ===== */
 #portfolio .section-label {
-  color: #CADCFC;
+  color: #678bc9;
 }
 
 .portfolio-see-more-text {
@@ -833,14 +833,14 @@ nav.scrolled {
   position: absolute;
   bottom: 0; left: 0; right: 0;
   height: 1px;
-  background: #CADCFC;
+  background: #678bc9;
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.35s ease;
 }
 
 .portfolio-see-more-text:hover {
-  color: #CADCFC;
+  color: #678bc9;
 }
 
 .portfolio-see-more-text:hover::after {
@@ -876,7 +876,7 @@ nav.scrolled {
 }
 
 .property-card {
-  background: var(--bg-card);
+  background: #0e1a2b;
   border: 1px solid var(--border);
   border-radius: 12px;
   overflow: hidden;
@@ -1047,7 +1047,7 @@ nav.scrolled {
   top: 0;
   bottom: 0;
   width: 3px;
-  background: #CADCFC;
+  background: #678bc9;
   opacity: 0;
   transition: opacity var(--transition);
 }
@@ -1097,7 +1097,7 @@ nav.scrolled {
   letter-spacing: 0.14em;
   text-transform: uppercase;
   font-weight: 700;
-  color: #CADCFC;
+  color: #678bc9;
 }
 
 .podcast-badge::before {
@@ -1106,7 +1106,7 @@ nav.scrolled {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: #CADCFC;
+  background: #678bc9;
   animation: pulse-dot 2s ease-in-out infinite;
 }
 
@@ -1145,7 +1145,7 @@ nav.scrolled {
   gap: 0.4rem;
   font-size: 0.72rem;
   font-weight: 600;
-  color: #CADCFC;
+  color: #678bc9;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   margin-top: 0.25rem;
@@ -1159,7 +1159,7 @@ nav.scrolled {
 
 /* ===== SERVICES ===== */
 #services .section-label {
-  color: #CADCFC;
+  color: #678bc9;
 }
 
 #services {
@@ -1202,7 +1202,7 @@ nav.scrolled {
 }
 
 .service-card:hover .service-card-title {
-  color: #CADCFC;
+  color: #678bc9;
 }
 
 .service-card-icon {
@@ -1314,9 +1314,9 @@ nav.scrolled {
 }
 
 .hive-btn-primary {
-  background: #CADCFC !important;
+  background: #678bc9 !important;
   color: #07090f !important;
-  border: 1px solid #CADCFC !important;
+  border: 1px solid #678bc9 !important;
   text-align: center;
   justify-content: center;
   font-weight: 700;
@@ -1442,7 +1442,7 @@ nav.scrolled {
 
 .testimonial-author {
   font-size: 1rem;
-  color: #CADCFC;
+  color: #678bc9;
   letter-spacing: 0.05em;
 }
 
@@ -1471,7 +1471,7 @@ nav.scrolled {
 .testimonial-next {
   background: rgba(103,139,201,0.1);
   border: 1px solid rgba(103,139,201,0.25);
-  color: #CADCFC;
+  color: #678bc9;
   border-radius: 50%;
   width: 38px;
   height: 38px;
@@ -1484,7 +1484,7 @@ nav.scrolled {
 .testimonial-prev:hover,
 .testimonial-next:hover {
   background: rgba(103,139,201,0.2);
-  border-color: #CADCFC;
+  border-color: #678bc9;
 }
 .testimonial-dots {
   display: flex;
@@ -1499,7 +1499,7 @@ nav.scrolled {
   transition: background 0.2s;
 }
 .testimonial-dot.active {
-  background: #CADCFC;
+  background: #678bc9;
 }
 
 /* ===== NEWSLETTER ===== */
@@ -1588,7 +1588,7 @@ nav.scrolled {
 
 /* ===== CONTACT ===== */
 #contact .section-label {
-  color: #CADCFC;
+  color: #678bc9;
 }
 
 #contact {
@@ -1796,7 +1796,7 @@ footer {
 }
 
 .footer-logo span {
-  color: #CADCFC;
+  color: #678bc9;
 }
 
 .footer-copy {
@@ -1808,7 +1808,7 @@ footer {
   font-size: 0.7rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #CADCFC;
+  color: #678bc9;
   margin-bottom: 1rem;
 }
 

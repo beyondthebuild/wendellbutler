@@ -10,12 +10,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
   <link rel="preload" href="smooth_fantasy (1)/Smooth Fantasy PersonalUseOnly.ttf" as="font" type="font/truetype" crossorigin="anonymous" />
-  <link rel="stylesheet" href="style.css?v=129" />
+  <link rel="stylesheet" href="style.css?v=131" />
 
   <style>
     /* ===== PAGE HERO ===== */
     .ventures-page-hero {
-      padding: 160px 0 80px;
+      padding: 220px 0 20px;
       background: #07090f;
       background-image:
         radial-gradient(ellipse 80% 60% at 50% 0%, rgba(103,139,201,0.13) 0%, transparent 65%),
@@ -36,14 +36,14 @@
     .ventures-page-hero-sub {
       font-size: 1rem;
       color: var(--text-muted);
-      max-width: 520px;
+      max-width: 900px;
       margin: 0 auto;
       line-height: 1.75;
     }
 
     /* ===== VENTURE CARDS GRID ===== */
     .ventures-page-section {
-      padding: 80px 0 120px;
+      padding: 40px 0 120px;
       background: #07090f;
     }
 
@@ -118,8 +118,8 @@
     }
 
     .venture-page-card:hover .venture-card-arrow {
-      border-color: #CADCFC;
-      color: #CADCFC;
+      border-color: #678bc9;
+      color: #678bc9;
     }
 
     .venture-card-role {
@@ -127,7 +127,7 @@
       font-weight: 600;
       letter-spacing: 0.14em;
       text-transform: uppercase;
-      color: #CADCFC;
+      color: #678bc9;
       margin-bottom: 0.35rem;
     }
 
@@ -221,9 +221,9 @@
   <div class="ventures-page-hero">
     <div class="container">
       <div class="reveal">
-        <p class="section-label" style="color:#CADCFC;">What Wendell Is Building</p>
+        <p class="section-label" style="color:#678bc9;">What Wendell Is Building</p>
         <h1 class="ventures-page-hero-title">Business Ventures</h1>
-        <p class="ventures-page-hero-sub">From real estate capital to private lending, community building to podcasting — every venture is built with purpose and built to last.</p>
+        <p class="ventures-page-hero-sub">From real estate capital to private lending, community building to podcasting — every venture<br>is built with purpose and built to last.</p>
       </div>
     </div>
   </div>
@@ -292,6 +292,7 @@
         <div class="venture-page-card reveal" style="cursor:default;">
           <div class="venture-card-top">
             <img src="Beyond the Build Pod.png" alt="Beyond the Build Pod" class="venture-card-logo" />
+            <div class="venture-card-arrow">↗</div>
           </div>
           <div>
             <p class="venture-card-role">Podcast Host</p>
@@ -305,16 +306,40 @@
             </a>
             <a href="https://podcasts.apple.com/us/podcast/beyond-the-build-with-wendell-butler/id1784328740" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:0.45rem;background:rgba(252,60,254,0.08);border:1px solid rgba(252,60,254,0.2);border-radius:6px;padding:0.45rem 0.85rem;text-decoration:none;color:#c86bfa;font-size:0.75rem;font-weight:600;">
               <svg width="13" height="13" viewBox="0 0 24 24" fill="#c86bfa"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zm0 2.4c5.3 0 9.6 4.3 9.6 9.6s-4.3 9.6-9.6 9.6S2.4 17.3 2.4 12 6.7 2.4 12 2.4zm0 2.4a7.2 7.2 0 100 14.4A7.2 7.2 0 0012 4.8zm0 2.4a4.8 4.8 0 110 9.6 4.8 4.8 0 010-9.6zm0 2.4a2.4 2.4 0 100 4.8 2.4 2.4 0 000-4.8zm-1.2 6.5v2.7h2.4v-2.7a4.82 4.82 0 01-2.4 0zm0-9.6v2.7a4.82 4.82 0 012.4 0V6.5h-2.4z"/></svg>
-              Apple Podcasts
+              Apple Music
             </a>
-            <a href="https://www.youtube.com/@beyondthebuildpod" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:0.4rem;color:rgba(255,255,255,0.4);font-size:0.75rem;text-decoration:none;">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 00-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6a3 3 0 00-2.1 2.1C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 002.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 002.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.5 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
+            <a href="https://www.youtube.com/@beyondthebuildpod" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:0.45rem;background:rgba(255,0,0,0.1);border:1px solid rgba(255,0,0,0.25);border-radius:6px;padding:0.45rem 0.85rem;text-decoration:none;color:#ff4444;font-size:0.75rem;font-weight:600;">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="#ff4444"><path d="M23.5 6.2a3 3 0 00-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6a3 3 0 00-2.1 2.1C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 002.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 002.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.5 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
               YouTube
             </a>
           </div>
         </div>
 
       </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA BLOCK ===== -->
+  <section style="
+    background: linear-gradient(135deg, #0a1628 0%, #0e1a2b 40%, #071020 100%);
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+    border-top: 1px solid rgba(202,220,252,0.08);
+  ">
+    <!-- Corner accent lines -->
+    <div style="position:absolute;top:0;left:0;width:180px;height:180px;border-top:1px solid rgba(202,220,252,0.12);border-left:1px solid rgba(202,220,252,0.12);pointer-events:none;"></div>
+    <div style="position:absolute;bottom:0;right:0;width:180px;height:180px;border-bottom:1px solid rgba(202,220,252,0.12);border-right:1px solid rgba(202,220,252,0.12);pointer-events:none;"></div>
+    <!-- Radial glow center -->
+    <div style="position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 50% 60% at 50% 50%, rgba(202,220,252,0.05) 0%, transparent 70%);"></div>
+
+    <div class="container" style="position:relative;z-index:1;text-align:center;">
+      <h2 style="font-family:'Playfair Display',serif;font-size:clamp(2.8rem,5vw,5rem);font-weight:700;color:#ffffff;line-height:1.05;margin-bottom:1.25rem;">Have more questions?</h2>
+      <p style="font-size:1.05rem;color:rgba(255,255,255,0.55);margin-bottom:0.4rem;">Feel free to get in touch.</p>
+      <p style="font-size:1.05rem;color:rgba(255,255,255,0.55);margin-bottom:2.75rem;">Wendell would be happy to answer.</p>
+      <a href="contact.html" style="display:inline-flex;align-items:center;gap:0.6rem;font-size:0.8rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;padding:0.95rem 2.5rem;border:1.5px solid #678bc9;border-radius:6px;color:#678bc9;text-decoration:none;background:transparent;transition:background 0.25s,color 0.25s;" onmouseover="this.style.background='rgba(202,220,252,0.08)'" onmouseout="this.style.background='transparent'">
+        Learn More →
+      </a>
     </div>
   </section>
 
