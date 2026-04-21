@@ -575,6 +575,8 @@ nav.scrolled {
   font-size: 0.8rem;
   color: #678bc9;
   letter-spacing: 0.2em;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
 }
 
 .about-text .section-title {
