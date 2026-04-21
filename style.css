@@ -113,7 +113,7 @@ nav {
   left: 0;
   right: 0;
   z-index: 100;
-  padding: 2rem 0;
+  padding: 2.75rem 0 1.25rem;
   transition: background var(--transition), backdrop-filter var(--transition), border-bottom var(--transition);
 }
 
