@@ -251,22 +251,18 @@
   </section>
 
   <!-- ===== CTA BLOCK ===== -->
-  <section style="padding: 80px 0 100px; background: #07090f;">
-    <div class="container">
-      <div style="
-        background: #0e1a2b;
-        border: 1px solid rgba(103,139,201,0.15);
-        border-radius: 16px;
-        padding: 64px 48px;
-        text-align: center;
-        max-width: 760px;
-        margin: 0 auto;
-        position: relative;
-        overflow: hidden;
-      ">
-        <!-- subtle top accent line -->
-        <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(to right,transparent,#678bc9,transparent);"></div>
+  <div style="position:relative;margin-top:-1px;">
+    <!-- Diagonal clip into section above -->
+    <div style="position:absolute;top:-60px;left:0;right:0;height:60px;background:#0e1a2b;clip-path:polygon(0 100%,100% 0,100% 100%);"></div>
+    <section style="background:#0e1a2b;padding:60px 0 100px;position:relative;overflow:hidden;">
+      <!-- Radial glow -->
+      <div style="position:absolute;inset:0;background:radial-gradient(ellipse 70% 80% at 50% 0%,rgba(103,139,201,0.12) 0%,transparent 65%);pointer-events:none;"></div>
+      <!-- Decorative corner lines -->
+      <div style="position:absolute;top:24px;left:24px;width:48px;height:48px;border-top:1.5px solid rgba(103,139,201,0.3);border-left:1.5px solid rgba(103,139,201,0.3);"></div>
+      <div style="position:absolute;bottom:24px;right:24px;width:48px;height:48px;border-bottom:1.5px solid rgba(103,139,201,0.3);border-right:1.5px solid rgba(103,139,201,0.3);"></div>
 
+      <div class="container" style="position:relative;z-index:1;text-align:center;">
+        <p style="font-size:0.72rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#678bc9;margin-bottom:1.25rem;">Investment Opportunities</p>
         <h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.9rem,3.5vw,2.8rem);font-weight:700;color:#ffffff;line-height:1.15;margin-bottom:1rem;">Ready to put your capital to work?</h2>
         <p style="font-size:0.97rem;color:rgba(255,255,255,0.5);max-width:460px;margin:0 auto 2.25rem;line-height:1.75;">Explore current investment opportunities or get in touch with Wendell directly to discuss a deal.</p>
 
@@ -279,8 +275,8 @@
           </a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
 
   <!-- ===== FOOTER ===== -->
   <footer>
