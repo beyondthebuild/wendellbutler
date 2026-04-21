@@ -1390,9 +1390,31 @@ nav.scrolled {
 /* ===== TESTIMONIAL ===== */
 .testimonial-section {
   padding: 100px 0;
-  background: rgba(255,255,255,0.1);
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
+  background: #080c14;
+  background-image:
+    radial-gradient(ellipse 70% 80% at 50% 50%, rgba(103,139,201,0.13) 0%, transparent 65%),
+    radial-gradient(ellipse 30% 40% at 10% 20%, rgba(103,139,201,0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 30% 40% at 90% 80%, rgba(103,139,201,0.08) 0%, transparent 60%);
+  border-top: 1px solid rgba(103,139,201,0.2);
+  border-bottom: 1px solid rgba(103,139,201,0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonial-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #678bc9, transparent);
+}
+
+.testimonial-section::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #678bc9, transparent);
 }
 
 .testimonial-card {
@@ -1427,13 +1449,13 @@ nav.scrolled {
   margin-bottom: 2rem;
   background: linear-gradient(
     105deg,
-    #556070 0%,
-    #556070 30%,
-    #9baec2 42%,
-    #dce8f5 50%,
-    #9baec2 58%,
-    #556070 70%,
-    #556070 100%
+    #678bc9 0%,
+    #678bc9 25%,
+    #aac4e8 40%,
+    #ffffff 50%,
+    #aac4e8 60%,
+    #678bc9 75%,
+    #678bc9 100%
   );
   background-size: 300% auto;
   -webkit-background-clip: text;
