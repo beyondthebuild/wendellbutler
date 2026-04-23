@@ -131,11 +131,11 @@ nav.scrolled {
 }
 
 .nav-logo {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Oswald', sans-serif;
   font-size: 1.45rem;
-  font-weight: 700;
+  font-weight: 500;
   color: var(--text);
-  letter-spacing: 0.02em;
+  letter-spacing: 0.05em;
   justify-self: start;
   margin-left: 0.75rem;
 }
