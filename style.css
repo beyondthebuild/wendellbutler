@@ -585,8 +585,7 @@ nav.scrolled {
 .about-text p {
   color: var(--text-muted);
   margin-bottom: 1.25rem;
-  font-family: 'EB Garamond', serif;
-  font-size: 1.05rem;
+  font-size: 0.9rem;
   line-height: 1.8;
 }
 
