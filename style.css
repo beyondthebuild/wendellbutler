@@ -670,7 +670,7 @@ nav.scrolled {
 }
 
 .stat-number {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Oswald', sans-serif;
   font-size: clamp(2.5rem, 5vw, 3.5rem);
   font-weight: 700;
   background: linear-gradient(135deg, #ffffff 30%, #678bc9 100%);
