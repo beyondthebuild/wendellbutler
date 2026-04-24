@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
   <link rel="preload" href="smooth_fantasy (1)/Smooth Fantasy PersonalUseOnly.ttf" as="font" type="font/truetype" crossorigin="anonymous" />
 
-  <link rel="stylesheet" href="style.css?v=154" />
+  <link rel="stylesheet" href="style.css?v=155" />
 
   <style>
     .contact-page-hero {
@@ -559,15 +559,18 @@
           body: data,
           headers: { 'Accept': 'application/json' }
         }).then(function(res) {
-          if (res.ok) {
-            form.reset();
-            form.style.display = 'none';
-            success.style.display = 'block';
-          } else {
-            alert('Something went wrong. Please try again or email directly.');
-          }
-        }).catch(function() {
-          alert('Something went wrong. Please try again or email directly.');
+          return res.json().then(function(json) {
+            if (res.ok) {
+              form.reset();
+              form.style.display = 'none';
+              success.style.display = 'block';
+            } else {
+              var msg = (json && json.error) ? json.error : 'Unknown error (status ' + res.status + ')';
+              alert('Formspree error: ' + msg + '\n\nCheck your Formspree dashboard to confirm your email.');
+            }
+          });
+        }).catch(function(err) {
+          alert('Network error: ' + err);
         });
       });
     }
