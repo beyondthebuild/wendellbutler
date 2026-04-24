@@ -132,12 +132,34 @@ nav.scrolled {
 
 .nav-logo {
   font-family: 'Oswald', sans-serif;
-  font-size: 1.6rem;
+  font-size: 1rem;
   font-weight: 600;
-  color: var(--text);
-  letter-spacing: 0.08em;
+  color: #fff;
+  letter-spacing: 0.04em;
   justify-self: start;
   margin-left: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  position: relative;
+  transition: opacity 0.25s;
+}
+
+.nav-logo::before,
+.nav-logo::after {
+  display: none;
+}
+
+.nav-logo:hover {
+  opacity: 0.8;
+}
+
+.nav-logo .logo-slash {
+  color: #678bc9;
+  font-size: 1.15rem;
+  font-weight: 200;
+  margin: 0 4px;
+  opacity: 0.65;
 }
 
 .nav-logo span {
@@ -1814,9 +1836,20 @@ footer {
 
 .footer-logo {
   font-family: 'Oswald', sans-serif;
-  font-size: 1.6rem;
+  font-size: 1rem;
   font-weight: 600;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.04em;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+}
+
+.footer-logo .logo-slash {
+  color: #678bc9;
+  font-size: 1.15rem;
+  font-weight: 200;
+  margin: 0 4px;
+  opacity: 0.65;
 }
 
 .footer-logo span {
