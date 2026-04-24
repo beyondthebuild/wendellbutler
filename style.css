@@ -132,16 +132,23 @@ nav.scrolled {
 
 .nav-logo {
   font-family: 'Oswald', sans-serif;
-  font-size: 1.45rem;
-  font-weight: 500;
+  font-size: 1.5rem;
+  font-weight: 700;
   color: #fff;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
   justify-self: start;
   margin-left: 0.75rem;
+  transition: opacity 0.2s;
+}
+
+.nav-logo:hover {
+  opacity: 0.85;
 }
 
 .nav-logo span {
   color: #678bc9;
+  font-weight: 700;
 }
 
 .nav-links {
