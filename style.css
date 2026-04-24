@@ -178,14 +178,14 @@ nav.scrolled {
 }
 
 .nav-cta {
-  font-size: 0.75rem;
-  font-weight: 900;
-  letter-spacing: 0.12em;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  padding: 0.55rem 1.3rem;
+  padding: 0.45rem 1.1rem;
   border-radius: var(--radius);
   background: transparent;
-  border: 2.5px solid #678bc9;
+  border: 1px solid #678bc9;
   color: #678bc9 !important;
   position: relative;
   overflow: hidden;
