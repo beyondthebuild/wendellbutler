@@ -184,17 +184,16 @@ nav.scrolled {
   text-transform: uppercase;
   padding: 0.55rem 1.3rem;
   border-radius: var(--radius);
-  background: #678bc9;
+  background: transparent;
   border: 2.5px solid #678bc9;
-  color: #ffffff !important;
+  color: #678bc9 !important;
   position: relative;
   overflow: hidden;
   transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease !important;
 }
 
 .nav-cta:hover {
-  background: #5578b8 !important;
-  border-color: #5578b8 !important;
+  background: #678bc9 !important;
   color: #ffffff !important;
   box-shadow: 0 4px 20px rgba(103, 139, 201, 0.4);
   transform: translateY(-1px);
