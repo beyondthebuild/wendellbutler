@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
   <link rel="preload" href="smooth_fantasy (1)/Smooth Fantasy PersonalUseOnly.ttf" as="font" type="font/truetype" crossorigin="anonymous" />
 
-  <link rel="stylesheet" href="style.css?v=156" />
+  <link rel="stylesheet" href="style.css?v=157" />
 
   <style>
     .contact-page-hero {
@@ -419,32 +419,24 @@
           <p class="contact-form-title">Send a Message</p>
           <p class="contact-form-sub">Fill out the form below and Wendell will get back to you shortly.</p>
 
-          <div data-fs-success style="display:none;margin-top:1.5rem;padding:1rem 1.25rem;background:rgba(103,139,201,0.1);border:1px solid rgba(103,139,201,0.3);border-radius:6px;color:#aac4e8;font-size:0.9rem;text-align:center;">
-            ✓ Message sent! Wendell will get back to you shortly.
-          </div>
-          <div data-fs-error style="display:none;margin-top:1rem;padding:0.75rem 1rem;background:rgba(200,80,80,0.1);border:1px solid rgba(200,80,80,0.3);border-radius:6px;color:#e08080;font-size:0.85rem;"></div>
-
-          <form id="contact-form">
+          <form id="contact-form" action="https://formspree.io/f/meevvzbk" method="POST">
             <div class="form-row">
               <div class="form-group">
                 <label for="fname">First Name</label>
-                <input type="text" id="fname" name="fname" placeholder="John" data-fs-field required />
-                <span data-fs-error="fname" style="color:#e08080;font-size:0.8rem;"></span>
+                <input type="text" id="fname" name="fname" placeholder="John" required />
               </div>
               <div class="form-group">
                 <label for="lname">Last Name</label>
-                <input type="text" id="lname" name="lname" placeholder="Smith" data-fs-field required />
-                <span data-fs-error="lname" style="color:#e08080;font-size:0.8rem;"></span>
+                <input type="text" id="lname" name="lname" placeholder="Smith" required />
               </div>
             </div>
             <div class="form-group" style="margin-top:1.25rem;">
               <label for="email">Email Address</label>
-              <input type="email" id="email" name="email" placeholder="john@example.com" data-fs-field required />
-              <span data-fs-error="email" style="color:#e08080;font-size:0.8rem;"></span>
+              <input type="email" id="email" name="email" placeholder="john@example.com" required />
             </div>
             <div class="form-group" style="margin-top:1.25rem;">
               <label for="interest">Subject</label>
-              <select id="interest" name="interest" data-fs-field required>
+              <select id="interest" name="interest" required>
                 <option value="" disabled selected>Select one…</option>
                 <option value="Joint Venture">Joint Venture / Partnership</option>
                 <option value="Investment Consulting">Investment Consulting</option>
@@ -455,10 +447,10 @@
             </div>
             <div class="form-group" style="margin-top:1.25rem;">
               <label for="message">Message</label>
-              <textarea id="message" name="message" placeholder="Tell me a bit about what you have in mind…" data-fs-field required></textarea>
-              <span data-fs-error="message" style="color:#e08080;font-size:0.8rem;"></span>
+              <textarea id="message" name="message" placeholder="Tell me a bit about what you have in mind…" required></textarea>
             </div>
-            <button type="submit" data-fs-submit-btn class="btn-primary" style="width:100%;justify-content:center;padding:0.5rem 1.5rem;font-size:0.8rem;margin-top:1.5rem;background:#678bc9;color:#0d121f;">
+            <input type="hidden" name="_next" value="https://bitoosh.github.io/wendellbutler/contact.html?sent=1" />
+            <button type="submit" class="btn-primary" style="width:100%;justify-content:center;padding:0.5rem 1.5rem;font-size:0.8rem;margin-top:1.5rem;background:#678bc9;color:#0d121f;">
               Send Message
             </button>
           </form>
@@ -554,9 +546,16 @@
 
   <script src="script.js?v=19"></script>
   <script>
-    window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
-    formspree('initForm', { formElement: '#contact-form', formId: 'meevvzbk' });
+    if (window.location.search.includes('sent=1')) {
+      var form = document.getElementById('contact-form');
+      if (form) {
+        form.style.display = 'none';
+        var msg = document.createElement('div');
+        msg.style.cssText = 'margin-top:1.5rem;padding:1rem 1.25rem;background:rgba(103,139,201,0.1);border:1px solid rgba(103,139,201,0.3);border-radius:6px;color:#aac4e8;font-size:0.9rem;text-align:center;';
+        msg.textContent = '✓ Message sent! Wendell will get back to you shortly.';
+        form.parentNode.insertBefore(msg, form);
+      }
+    }
   </script>
-  <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 </body>
 </html>
