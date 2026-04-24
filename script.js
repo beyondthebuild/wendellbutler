@@ -93,18 +93,7 @@ document.querySelectorAll('.stat-number[data-target]').forEach(el => {
 });
 
 // ===== CONTACT FORM =====
-const form = document.getElementById('contact-form');
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const name = form.querySelector('#fname').value.trim();
-  const email = form.querySelector('#email').value.trim();
-  const interest = form.querySelector('#interest').value;
-  const message = form.querySelector('#message').value.trim();
-
-  const subject = encodeURIComponent(`Portfolio Inquiry — ${interest}`);
-  const body = encodeURIComponent(`Hi Wendell,\n\nMy name is ${name}.\n\n${message}\n\nBest,\n${name}\n${email}`);
-  window.location.href = `mailto:wendell@hhcapitalrealty.com?subject=${subject}&body=${body}`;
-});
+// Form is handled by Formspree (native POST) — no JS interception needed.
 
 // ===== ACTIVE NAV LINK =====
 const sections = document.querySelectorAll('section[id]');
