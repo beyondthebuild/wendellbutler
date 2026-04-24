@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
   <link rel="preload" href="smooth_fantasy (1)/Smooth Fantasy PersonalUseOnly.ttf" as="font" type="font/truetype" crossorigin="anonymous" />
 
-  <link rel="stylesheet" href="style.css?v=158" />
+  <link rel="stylesheet" href="style.css?v=159" />
 
   <style>
     .contact-page-hero {
@@ -551,56 +551,57 @@
 
   <script src="script.js?v=21"></script>
   <script>
-    document.getElementById('form-submit-btn').addEventListener('click', function() {
-      var form = document.getElementById('contact-form');
-      var btn = this;
-      var fname = document.getElementById('fname').value.trim();
-      var lname = document.getElementById('lname').value.trim();
-      var email = document.getElementById('email').value.trim();
-      var interest = document.getElementById('interest').value;
-      var message = document.getElementById('message').value.trim();
-
-      if (!fname || !lname || !email || !interest || !message) {
-        document.getElementById('form-error').style.display = 'block';
-        document.getElementById('form-error').textContent = 'Please fill in all fields.';
-        return;
-      }
-
-      btn.textContent = 'Sending…';
-      btn.disabled = true;
-
-      var data = new FormData();
-      data.append('fname', fname);
-      data.append('lname', lname);
-      data.append('email', email);
-      data.append('interest', interest);
-      data.append('message', message);
-
-      fetch('https://formspree.io/f/meevvzbk', {
-        method: 'POST',
-        body: data,
-        headers: { 'Accept': 'application/json' }
-      }).then(function(res) {
-        if (res.ok) {
-          form.style.display = 'none';
-          document.getElementById('form-success').style.display = 'block';
-          document.getElementById('form-error').style.display = 'none';
-        } else {
-          res.json().then(function(json) {
-            var errMsg = (json && json.error) ? json.error : 'Submission failed (status ' + res.status + ')';
-            document.getElementById('form-error').textContent = errMsg;
-            document.getElementById('form-error').style.display = 'block';
-            btn.textContent = 'Send Message';
-            btn.disabled = false;
-          });
+    (function() {
+      var btn = document.getElementById('form-submit-btn');
+      var successBox = document.getElementById('form-success');
+      var errorBox = document.getElementById('form-error');
+      if (!btn) { return; }
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        var fname = document.getElementById('fname').value.trim();
+        var lname = document.getElementById('lname').value.trim();
+        var email = document.getElementById('email').value.trim();
+        var interest = document.getElementById('interest').value;
+        var message = document.getElementById('message').value.trim();
+        if (!fname || !lname || !email || !interest || !message) {
+          errorBox.textContent = 'Please fill in all fields.';
+          errorBox.style.display = 'block';
+          return;
         }
-      }).catch(function(err) {
-        document.getElementById('form-error').textContent = 'Network error: ' + err;
-        document.getElementById('form-error').style.display = 'block';
-        btn.textContent = 'Send Message';
-        btn.disabled = false;
+        btn.textContent = 'Sending…';
+        btn.disabled = true;
+        errorBox.style.display = 'none';
+        var data = new FormData();
+        data.append('fname', fname);
+        data.append('lname', lname);
+        data.append('email', email);
+        data.append('interest', interest);
+        data.append('message', message);
+        fetch('https://formspree.io/f/meevvzbk', {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        }).then(function(res) {
+          return res.json().then(function(json) {
+            if (res.ok) {
+              document.getElementById('contact-form').style.display = 'none';
+              successBox.style.display = 'block';
+            } else {
+              errorBox.textContent = (json && json.error) ? json.error : 'Error ' + res.status + '. Try again.';
+              errorBox.style.display = 'block';
+              btn.textContent = 'Send Message';
+              btn.disabled = false;
+            }
+          });
+        }).catch(function(err) {
+          errorBox.textContent = 'Network error. Please try again.';
+          errorBox.style.display = 'block';
+          btn.textContent = 'Send Message';
+          btn.disabled = false;
+        });
       });
-    });
+    })();
   </script>
 </body>
 </html>
