@@ -340,11 +340,11 @@ nav.scrolled {
 }
 
 .hw-word-1.start-anim {
-  animation: write-word 5s cubic-bezier(0.1, 0.9, 0.2, 1) 0.7s both;
+  animation: write-word 1.1s linear 0.3s both;
 }
 
 .hw-word-2.start-anim {
-  animation: write-word 5s cubic-bezier(0.1, 0.9, 0.2, 1) 5.8s both;
+  animation: write-word 1.1s linear 1.55s both;
 }
 
 .hero-title .accent {
