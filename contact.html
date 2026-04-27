@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
   <link rel="preload" href="smooth_fantasy (1)/Smooth Fantasy PersonalUseOnly.ttf" as="font" type="font/truetype" crossorigin="anonymous" />
 
-  <link rel="stylesheet" href="style.css?v=188" />
+  <link rel="stylesheet" href="style.css?v=189" />
 
   <style>
     .contact-page-hero {
@@ -481,20 +481,21 @@
         <h2 class="newsletter-block-title">Subscribe to the Newsletter</h2>
         <p class="newsletter-block-desc">Front-row access to the conversations, decisions, and deals that matter.</p>
 
-        <form class="newsletter-block-form" onsubmit="(function(e){
-          e.preventDefault();
-          var f=e.target;
-          var btn=f.querySelector('button[type=submit]');
-          var email=f.querySelector('[name=nl_email]').value.trim();
-          window.open('https://wendellbutler.beehiiv.com/subscribe?email='+encodeURIComponent(email)+'&utm_source=website','_blank');
-          btn.textContent='Subscribed ✓';
-          btn.style.background='#2a7a4b';
-          setTimeout(function(){btn.textContent='Subscribe →';btn.style.background='';},3000);
-          f.reset();
-        })(event)">
+        <iframe name="beehiiv-hidden" style="display:none;"></iframe>
+        <form class="newsletter-block-form"
+          action="https://wendellbutler.beehiiv.com/subscribe"
+          method="POST"
+          target="beehiiv-hidden"
+          onsubmit="(function(e){
+            var f=e.target;
+            var btn=f.querySelector('button[type=submit]');
+            btn.textContent='Subscribed ✓';
+            btn.style.background='#2a7a4b';
+            setTimeout(function(){f.reset();btn.textContent='Subscribe →';btn.style.background='';},3000);
+          })(event)">
           <div class="newsletter-fields">
-            <input type="text" name="nl_name" placeholder="Your name" />
-            <input type="email" name="nl_email" placeholder="Your email address" required />
+            <input type="text" name="first_name" placeholder="Your name" />
+            <input type="email" name="email" placeholder="Your email address" required />
           </div>
           <button type="submit">Subscribe →</button>
           <p class="newsletter-privacy">No spam. Unsubscribe anytime.</p>
