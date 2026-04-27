@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
   <link rel="preload" href="smooth_fantasy (1)/Smooth Fantasy PersonalUseOnly.ttf" as="font" type="font/truetype" crossorigin="anonymous" />
 
-  <link rel="stylesheet" href="style.css?v=187" />
+  <link rel="stylesheet" href="style.css?v=188" />
 
   <style>
     .contact-page-hero {
@@ -486,15 +486,11 @@
           var f=e.target;
           var btn=f.querySelector('button[type=submit]');
           var email=f.querySelector('[name=nl_email]').value.trim();
-          btn.disabled=true; btn.textContent='Subscribing...';
-          fetch('https://api.beehiiv.com/v2/publications/316bcc62-9cb6-4165-9828-1ddf9796481d/subscriptions',{
-            method:'POST',
-            headers:{'Content-Type':'application/json','Authorization':'Bearer SjR8OaHfifXEgwZivvwwRrpmYHXJvlK1lQdqnjbdszbF6qlu3qUEXkarttJ1M1Hg'},
-            body:JSON.stringify({email:email,reactivate_existing:false,send_welcome_email:true})
-          }).then(function(r){
-            if(r.ok){btn.textContent='Subscribed ✓';btn.style.background='#2a7a4b';f.reset();}
-            else{btn.disabled=false;btn.textContent='Subscribe →';alert('Something went wrong. Please try again.');}
-          }).catch(function(){btn.disabled=false;btn.textContent='Subscribe →';alert('Something went wrong. Please try again.');});
+          window.open('https://wendellbutler.beehiiv.com/subscribe?email='+encodeURIComponent(email)+'&utm_source=website','_blank');
+          btn.textContent='Subscribed ✓';
+          btn.style.background='#2a7a4b';
+          setTimeout(function(){btn.textContent='Subscribe →';btn.style.background='';},3000);
+          f.reset();
         })(event)">
           <div class="newsletter-fields">
             <input type="text" name="nl_name" placeholder="Your name" />
