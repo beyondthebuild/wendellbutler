@@ -1,5 +1,6 @@
 # Videos (too large for GitHub)
 *.mp4
+!hero-video.mp4
 *.MOV
 *.mov
 
