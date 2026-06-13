@@ -979,9 +979,9 @@ nav.scrolled {
 }
 
 .status-new {
-  background: rgba(234, 179, 8, 0.85);
-  color: #07090f;
-  border: 1px solid rgba(234, 179, 8, 1);
+  background: rgba(249, 115, 22, 0.85);
+  color: #ffffff;
+  border: 1px solid rgba(249, 115, 22, 1);
   font-weight: 700;
   text-shadow: none;
 }
