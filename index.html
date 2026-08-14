@@ -308,6 +308,11 @@
         </div>
 
 
+      </div>
+
+      <!-- Hidden extra cards -->
+      <div class="portfolio-grid stagger-parent portfolio-extra" id="portfolio-extra" style="display:none;margin-top:1.5rem;">
+
         <div class="property-card reveal">
           <div class="property-image" style="padding:0;overflow:hidden;">
             <img src="charlton.PNG" alt="Charlton, MA Multifamily - BRRRR Project" style="width:100%;height:100%;object-fit:cover;display:block;" />
@@ -336,6 +341,10 @@
           </div>
         </div>
 
+      </div>
+
+      <div style="text-align:center;margin-top:2.5rem;">
+        <button id="portfolio-see-more" class="portfolio-see-more-text" onclick="(function(btn){var e=document.getElementById('portfolio-extra');var open=e.getAttribute('data-open')==='1';if(!open){e.setAttribute('data-open','1');e.style.display='grid';btn.innerHTML='Show Less <span class=\'psm-arrow\'>↑</span>';}else{e.setAttribute('data-open','0');e.style.display='none';btn.innerHTML='View More <span class=\'psm-arrow\'>↓</span>';}})(this)">View More <span class="psm-arrow">↓</span></button>
       </div>
 
     </div>
